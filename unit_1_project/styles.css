@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+
+
+*::before, 
+*::after { 
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+}
+
+header {    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.tab {
+    margin: 1.3rem;
+}
+
+
+.container {
+    margin: 7.6rem auto;
+
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    width: 34.4rem;
+    height: 15.3rem;
+    margin: auto;
+    flex-flow: wrap;
+}
+
+.planetIdTag {
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 481px) {
+    nav {
+        display: none;
+    }
+
+    article {
+        display: flex;
+        width: 12.5rem;
+        height: 20rem;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    header {
+        display: inline-block;
+        text-align: center;
+    }
+    
+    nav {
+        display: none;
+    }
+        
+    article {
+        display: flex;
+        width: 12.5rem;
+        height: 20rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    input {
+        margin: 5px;
+    }
+}

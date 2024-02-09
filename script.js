@@ -14,7 +14,7 @@ const planetImages = {
 }
 
 
-if (document.URL.includes("index.html") || document.URL.includes("Unit-1-Project")) {
+if (!document.URL.includes("earth.html")) {
   const form = document.querySelector("form");
   
   form.addEventListener("submit", handleSubmit);

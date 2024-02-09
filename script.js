@@ -44,22 +44,22 @@ if (document.URL.includes("index.html")) {
     const infoContainer = document.querySelector(".info")
 
     let mockPlanetPictureHTML = ` 
-      <img class="earth" src="${planetImages[planet.englishName]}" 
+      <img class="earth" src="${planetImages[planet?.englishName]}" 
       width="300" height="300">
       `
     
     let mockPlanetSectionHTML = `
-      <img class="icon" src="${planetImages[planet.englishName]}"
+      <img class="icon" src="${planetImages[planet?.englishName]}"
       width="50" height="50">
-      <h3 id="planetName">${planet.englishName}</h3>
+      <h3 id="planetName">${planet?.englishName}</h3>
     `
 
     let mockHTML = `
       <h3 id="planetInfo">Information</h3>
-      <p>Discovered by: ${planet.discoveredBy || "No one"}</p>
-      <p>Date discovered in: ${planet.discoveryDate || "N/A"}</p>
-      <p>Sideral orbit: ${planet.sideralOrbit} days</p>
-      <p>Sideral rotation: ${planet.sideralRotation} hrs</p>
+      <p>Discovered by: ${planet?.discoveredBy || "No one"}</p>
+      <p>Date discovered in: ${planet?.discoveryDate || "N/A"}</p>
+      <p>Sideral orbit: ${planet?.sideralOrbit} days</p>
+      <p>Sideral rotation: ${planet?.sideralRotation} hrs</p>
       <p>No of moons: ${planet?.moons?.length || "No Moons"}</p>
     `;
 

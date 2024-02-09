@@ -14,7 +14,7 @@ const planetImages = {
 }
 
 
-if (document.URL.includes("index.html")) {
+if (document.URL.includes("index.html") || document.URL.includes("Unit-1-Project")) {
   const form = document.querySelector("form");
   
   form.addEventListener("submit", handleSubmit);
@@ -36,30 +36,30 @@ if (document.URL.includes("index.html")) {
 } else {
   const anchors = document.querySelectorAll(".planet");
 
-  async function displayData() {
-    const planet = await JSON.parse(localStorage.getItem("planet"))
+  function displayData() {
+    const planet = JSON.parse(localStorage.getItem("planet"))
     
     const planetPicture = document.querySelector(".picture")
     const planetSection = document.querySelector(".planetId")
     const infoContainer = document.querySelector(".info")
 
     let mockPlanetPictureHTML = ` 
-      <img class="earth" src="${planetImages[planet?.englishName]}" 
+      <img class="earth" src="${planetImages[planet.englishName]}" 
       width="300" height="300">
       `
     
     let mockPlanetSectionHTML = `
-      <img class="icon" src="${planetImages[planet?.englishName]}"
+      <img class="icon" src="${planetImages[planet.englishName]}"
       width="50" height="50">
-      <h3 id="planetName">${planet?.englishName}</h3>
+      <h3 id="planetName">${planet.englishName}</h3>
     `
 
     let mockHTML = `
       <h3 id="planetInfo">Information</h3>
-      <p>Discovered by: ${planet?.discoveredBy || "No one"}</p>
-      <p>Date discovered in: ${planet?.discoveryDate || "N/A"}</p>
-      <p>Sideral orbit: ${planet?.sideralOrbit} days</p>
-      <p>Sideral rotation: ${planet?.sideralRotation} hrs</p>
+      <p>Discovered by: ${planet.discoveredBy || "No one"}</p>
+      <p>Date discovered in: ${planet.discoveryDate || "N/A"}</p>
+      <p>Sideral orbit: ${planet.sideralOrbit} days</p>
+      <p>Sideral rotation: ${planet.sideralRotation} hrs</p>
       <p>No of moons: ${planet?.moons?.length || "No Moons"}</p>
     `;
 

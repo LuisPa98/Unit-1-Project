@@ -36,8 +36,8 @@ if (document.URL.includes("index.html")) {
 } else {
   const anchors = document.querySelectorAll(".planet");
 
-  function displayData() {
-    const planet = JSON.parse(localStorage.getItem("planet"))
+  async function displayData() {
+    const planet = await JSON.parse(localStorage.getItem("planet"))
     
     const planetPicture = document.querySelector(".picture")
     const planetSection = document.querySelector(".planetId")

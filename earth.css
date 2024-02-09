@@ -103,6 +103,9 @@ footer {
         height: 100%;
     }
     
+    .title{
+        margin: .7rem auto;
+    }
     
     header {
         grid-area: a;

@@ -59,13 +59,17 @@ article {
     text-transform: capitalize;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 559px) {
+@media only screen and (max-width: 559px) {
     header {
         display: inline-block;
         text-align: center;
         height: 7.1rem;
     }
     
+    .title{
+        margin: .7rem auto;
+    }
+
     .tab {
         margin-bottom: 1.3rem;
         margin-top: 0;

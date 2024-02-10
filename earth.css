@@ -88,7 +88,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 559px) {
+@media only screen and (max-width: 559px) {
     body {
         display: grid;
         grid-template-columns: 50% 50%;

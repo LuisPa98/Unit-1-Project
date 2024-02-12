@@ -55,6 +55,7 @@ nav {
 a {
     margin: 1.3rem;
     text-decoration: none;
+    color: #4af626;
 }
 
 a:hover {
@@ -64,6 +65,7 @@ a:hover {
 
 a:visited {
     color: #4af626;
+    text-decoration-color: #4af626;
 }
 
 .picture {

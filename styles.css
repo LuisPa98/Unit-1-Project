@@ -6,7 +6,6 @@ html {
 }
 
 
-
 *::before, 
 *::after { 
     box-sizing: inherit;
@@ -14,10 +13,15 @@ html {
 
 
 body {
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://thumbs.wbm.im/pw/medium/cec8ee7a58437fdc6f59dbde546020f9.avif");
     margin: 0;
 }
 
 header {    
+    border-bottom: solid 5px;
+    border-image: radial-gradient(#fff6, #0009) 1;
     display: flex;
     align-items: center;
     width: 100%;
@@ -32,12 +36,22 @@ nav {
     list-style: none;
     flex-direction: row;
     justify-content: end;
+    text-transform: uppercase;
 }
 
-.tab {
+a {
     margin: 1.3rem;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+    animation-duration: 5000s;
+}
+
+a:visited {
+    color: #4af626;
+}
 
 .container {
     margin: 7.6rem auto;
@@ -45,10 +59,12 @@ nav {
 }
 
 article {
+    background: linear-gradient(#0000, #000);
+    background-color: #00000077;
+    color: #4af626;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid black;
     width: 34.4rem;
     height: 15.3rem;
     margin: auto;
